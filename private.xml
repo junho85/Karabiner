@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <!-- https://github.com/tekezo/Karabiner/blob/master/src/core/server/Resources/include/checkbox/for_pc_users.xml -->
+    <name>Use PC Style PageUp/PageDown - customized by junho85</name>
+    <appendix>(behave like Option+PageUp/PageDown)</appendix>
+    <appendix></appendix>
+    <appendix>{{ PC_STYLE_BINDINGS_IGNORE_APPS_DESCRIPTION }}</appendix>
+    <identifier>remap.pclikepageupdown_except_emacs_by_junho85</identifier>
+    <not>
+      {{ PC_STYLE_BINDINGS_IGNORE_APPS }},
+      <!-- except for Microsoft applications which already have this built-in -->
+      WORD, EXCEL, POWERPOINT, OUTLOOK, Atom
+    </not>
+    {{ PC_STYLE_BINDINGS_IGNORE_EXTRA }}
+    <autogen>__KeyToKey__ FROMKEYCODE_PAGEUP,   ModifierFlag::NONE, KeyCode::PAGEUP, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ FROMKEYCODE_PAGEDOWN, ModifierFlag::NONE, KeyCode::PAGEDOWN, ModifierFlag::OPTION_L</autogen>
+  </item>
+</root>
